@@ -10,7 +10,7 @@ console.log("-----------------------------------------");
 prompt.start();
 
 game = {
-	wordBank: ["mango", "rambutan", "lanzones", "chico", "durian" ],
+	wordBank: ["mango", "rambutan", "lanzones", "chico", "durian", "capulin", "chirimoya", "guanabana"],
 	wordsWon: 0, 
 	guessesRemaining: 6, 
 
