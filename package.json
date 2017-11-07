@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/manneocampo/Hangman-CLI/issues"
   },
-  "homepage": "https://github.com/manneocampo/Hangman-CLI#readme"
+  "homepage": "https://github.com/manneocampo/Hangman-CLI#readme",
+  "dependencies": {
+    "inquirer": "^3.3.0",
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {}
 }
