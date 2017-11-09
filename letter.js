@@ -6,7 +6,7 @@ var Letter = function (alphabet){
 	this.appear = false; 
 	
 	this.letterSelect = function (){
-		return !(this.appear) ? "_" : this.character; //check this
+		return !(this.appear) ? "_" : this.character; 
 	};
 
 };

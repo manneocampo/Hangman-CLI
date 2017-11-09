@@ -17,6 +17,7 @@ game = {
 	startGame: function (word) {
 		this.resetGuesses();
 		this.currentWord = new Word(this.wordBank[Math.floor(Math.random()*this.wordBank.length)]);
+		console.log("CurrentWord:" , JSON.stringify(this.currentWord, null, 2));
 		this.currentWord.getLetters();
 		this.promptUser();
 
@@ -41,17 +42,20 @@ game = {
 				if(_this.currentWord.findWord()){
 					console.log("You win!");
 					console.log("-------------------------");
-					return; //make sure correct
+					console.log("The correct word is:", _this.currentWord.answer);
+					_this.startGame();
+					return; 
 				}
 			}
 			console.log("Guesses remaining:" + _this.guessesRemaining);
 			console.log("--------------------------------");
 			if((_this.guessesRemaining > 0) && (_this.currentWord.found == false)){
-				_this.promptUser();
-			} else if (_this.guessesRemaining == 0) {
-				console.log("Game Over. Correct Word:", _this.currentWord.answer);
-			}else {
 				console.log(_this.currentWord.wordSelect());
+				_this.promptUser();
+			} else if(_this.guessesRemaining == 0) {
+				console.log("Game Over. Correct Word:", _this.currentWord.answer);
+				_this.startGame();
+	
 			}
 		});
 	}

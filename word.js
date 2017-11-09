@@ -14,21 +14,21 @@ function Word(answer) {
 
 	this.findWord = function() {
 		this.found = this.letters.every(function(currentLetter){ //check this
-			return currentLetter.appear; //check this
+			return currentLetter.appear; 
 		}); 
-		return this.found; //check this
+		return this.found; 
 	}; 
 
-	this.checkLetter = function(guessLetter){ //check whole thing
-		var toReturn = 0; 
+	this.checkLetter = function(guessLetter){ 
+		var foundLetter = 0; 
 
 		for (var i =0; i <this.letters.length; i++){
-			if (this.letters[i].characters == guessLetter){
+			if (this.letters[i].character == guessLetter){
 				this.letters[i].appear = true; 
-				toReturn++;
+				foundLetter++;
 			}
 		}
-		return toReturn;
+		return foundLetter;
 	};
 
 	this.wordSelect = function (){ //check 
