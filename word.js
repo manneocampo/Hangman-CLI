@@ -8,12 +8,12 @@ function Word(answer) {
 
 	this.getLetters = function(){
 		for (var i=0; i<this.answer.length; i++){
-			this.letters.push (new Letter(this.answer[i]));//check this
+			this.letters.push (new Letter(this.answer[i]));
 		}
 	};
 
 	this.findWord = function() {
-		this.found = this.letters.every(function(currentLetter){ //check this
+		this.found = this.letters.every(function(currentLetter){ 
 			return currentLetter.appear; 
 		}); 
 		return this.found; 
@@ -31,7 +31,7 @@ function Word(answer) {
 		return foundLetter;
 	};
 
-	this.wordSelect = function (){ //check 
+	this.wordSelect = function (){ 
 		var string = ""; 
 		for (var i=0; i< this.letters.length; i++){
 			string += this.letters[i].letterSelect();
